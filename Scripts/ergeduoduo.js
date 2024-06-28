@@ -6,10 +6,9 @@
 
 
  [rewrite_local]
- ^https?:\/\/cms.cekid.com\/publish\/998\/2023applaunchconfig.json url script-response-body https://raw.githubusercontent.com/luojingam/QX/master/Scripts/haiziwang.js
  ^http:\/\/api.ergeduoduo.com\/baby\/v1\/bb.php* url script-response-body https://raw.githubusercontent.com/luojingam/QX/master/Scripts/ergeduoduo.js
  [mitm]
- hostname = cms.cekid.com
+ hostname = api.ergeduoduo.com
 
  **********************************************/
 

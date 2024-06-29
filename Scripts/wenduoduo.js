@@ -14,9 +14,14 @@
  **********************************************/
 
 let obj = JSON.parse($response.body);
-obj.data.userInfo.appleExpireTime = "2099-12-31 00:00:00";
-obj.data.userInfo.redeemExpireTime = "2099-12-31 00:00:00";
-obj.data.userInfo.expValue = 9999;
-obj.data.userInfo.redeemLifeVip = true;
-obj.data.userInfo.appleLifeVip = true;
+let timestamp = new Date().getTime();
+let date = new Date(timestamp);
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+let hour = date.getHours();
+let minute = date.getMinutes();
+let second = date.getSeconds();
+let formatTime = year + "-" + month + "-" + day + 2 + " " + hour + ":" + minute + ":" + second;
+obj.data.userInfo.appleExpireTime = formatTime;
 $done({body: JSON.stringify(obj)});

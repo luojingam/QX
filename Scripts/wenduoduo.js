@@ -27,6 +27,7 @@ let minute = date.getMinutes();
 minute = minute < 10 ? "0" + minute : minute;
 let second = date.getSeconds();
 second = second < 10 ? "0" + second : second;
-let formatTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+// let formatTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+let formatTime = "2024-07-02 09:50:33";
 obj.data.userInfo.appleExpireTime = formatTime;
 $done({body: JSON.stringify(obj)});

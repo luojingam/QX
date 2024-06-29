@@ -14,11 +14,11 @@
  **********************************************/
 
 let obj = JSON.parse($response.body);
-let timestamp = new Date().getTime();
+let timestamp = new Date().getTime() + 86400000 * 2;
 let date = new Date(timestamp);
 let year = date.getFullYear();
 let month = date.getMonth() + 1;
-let day = date.getDate() + 2;
+let day = date.getDate();
 let hour = date.getHours();
 let minute = date.getMinutes();
 let second = date.getSeconds();

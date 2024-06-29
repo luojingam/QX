@@ -14,9 +14,9 @@
  **********************************************/
 
 let obj = JSON.parse($response.body);
-obj.data.appleExpireTime = "2099-12-31 00:00:00";
-obj.data.redeemExpireTime = "2099-12-31 00:00:00";
-obj.data.expValue = 9999;
-obj.data.redeemLifeVip = true;
-obj.data.appleLifeVip = true;
+obj.data.userInfo.appleExpireTime = "2099-12-31 00:00:00";
+obj.data.userInfo.redeemExpireTime = "2099-12-31 00:00:00";
+obj.data.userInfo.expValue = 9999;
+obj.data.userInfo.redeemLifeVip = true;
+obj.data.userInfo.appleLifeVip = true;
 $done({body: JSON.stringify(obj)});
